@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Restaurant | Zomato</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #e50914;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 16px;
+        }
+
+        /* Form Container */
+        .form-container {
+            background-color: #fff;
+            padding: 30px;
+            margin: 40px auto;
+            width: 80%;
+            max-width: 700px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container h2 {
+            text-align: center;
+            color: #e50914;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            color: #333;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .form-group input, 
+        .form-group textarea, 
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            height: 120px;
+        }
+
+        .form-group input:focus, 
+        .form-group textarea:focus, 
+        .form-group select:focus {
+            border-color: #e50914;
+            outline: none;
+        }
+
+        /* Submit Button */
+        .submit-btn {
+            width: 100%;
+            padding: 14px;
+            background-color: #e50914;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #b00810;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #e50914;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .form-container {
+                width: 95%;
+            }
+
+            header h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Add Your Restaurant</h1>
+        <p>Help food lovers discover your delicious dishes</p>
+    </header>
+
+    <!-- Form Container -->
+    <div class="form-container">
+        <h2>Restaurant Information</h2>
+        <form action="/submit-restaurant" method="POST">
+            <!-- Restaurant Name -->
+            <div class="form-group">
+                <label for="restaurant-name">Restaurant Name</label>
+                <input type="text" id="restaurant-name" name="restaurant_name" placeholder="Enter restaurant name" required>
+            </div>
+
+            <!-- Location -->
+            <div class="form-group">
+                <label for="restaurant-location">Location</label>
+                <input type="text" id="restaurant-location" name="restaurant_location" placeholder="Enter location" required>
+            </div>
+
+            <!-- Cuisine Type -->
+            <div class="form-group">
+                <label for="cuisine-type">Cuisine Type</label>
+                <select id="cuisine-type" name="cuisine_type" required>
+                    <option value="" disabled selected>Select Cuisine Type</option>
+                    <option value="Indian">Indian</option>
+                    <option value="Chinese">Chinese</option>
+                    <option value="Italian">Italian</option>
+                    <option value="Mexican">Mexican</option>
+                    <option value="Thai">Thai</option>
+                    <option value="American">American</option>
+                </select>
+            </div>
+
+            <!-- Average Price for Two -->
+            <div class="form-group">
+                <label for="average-price">Average Price for Two (₹)</label>
+                <input type="number" id="average-price" name="average_price" placeholder="Enter average price" required>
+            </div>
+
+            <!-- Description -->
+            <div class="form-group">
+                <label for="description">Restaurant Description</label>
+                <textarea id="description" name="restaurant_description" placeholder="Enter a brief description" required></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Add Restaurant</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Zomato. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

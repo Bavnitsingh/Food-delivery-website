@@ -1,0 +1,208 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: rgb(249, 244, 244); /* Light background color */
+  color: #141111; /* Default text color for light mode */
+  line-height: 1.6;
+  transition: background-color 0.33s, color 0.3s;
+}
+
+/* Dark Mode */
+body.dark {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* Header */
+header {
+  background-color: #c62636;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  width: 100px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-list li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-list li a:hover {
+  text-decoration: underline;
+}
+
+.theme-toggle {
+  padding: 10px 20px;
+  background-color: #140a0a;
+  color: #e23744;
+  border: none; /* Removed border value for consistent styling */
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.theme-toggle:hover {
+  background-color: #b50f03;
+  color: rgb(11, 9, 9);
+}
+
+/* Hero Section */
+.hero-section {
+  background-image: url('/img.png/bgimage.png');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 100px 20px;
+  color: white;
+}
+
+.main-logo {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.intro-text {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.search-input {
+  width: 50%;
+  padding: 10px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  font-size: 1.1rem;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Services Section */
+.services-section {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #fffafa; /* Light mode color */
+}
+
+.services-section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.service {
+  display: inline-block;
+  width: 200px;
+  margin: 20px;
+  text-align: center;
+}
+
+.service img {
+  width: 100%;
+  transition: transform 0.3s;
+}
+
+.service img:hover {
+  transform: scale(1.1);
+}
+
+.service p {
+  font-size: 1rem;
+  color: #0d0404;
+}
+
+/* Popular Restaurants Section */
+.popular-section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.popular-section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.video-container iframe {
+  max-width: 100%;
+  height: 400px;
+}
+
+.restaurant-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.restaurant {
+  width: 250px;
+  text-align: center;
+  margin: 20px;
+}
+
+.restaurant img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.restaurant img:hover {
+  transform: scale(1.1);
+}
+
+.restaurant h3 {
+  font-size: 1.3rem;
+  margin-top: 10px;
+}
+
+.restaurant p {
+  color: #e2d8d8;
+}
+
+/* Footer */
+footer {
+  background-color: #e10808;
+  color: rgb(11, 8, 8);
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+/* Dark Mode Styles */
+body.dark .theme-toggle {
+  background-color: #ac7277;
+  color: rgb(28, 22, 22);
+}
+
+body.dark header {
+  background-color: #d61414;
+}
+
+body.dark footer {
+  background-color: #dc0d0d;
+}
+
+body.dark .services-section {
+  background-color: #1f1f1f;
+}

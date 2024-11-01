@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investor Relations | Company Name</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #ad3d00;
+            color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .header-container h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .header-container p {
+            font-size: 18px;
+            margin: 0;
+        }
+
+        /* Main Content Styles */
+        main {
+            padding: 40px 20px;
+        }
+
+        .content-block {
+            background-color: #fff;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            font-size: 28px;
+            color: #ad0000;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Report Links */
+        .report-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .report-links a {
+            color: #ad1100;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .report-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Stock Widget */
+        .stock-widget iframe {
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Press Releases */
+        .press-releases ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .press-releases li {
+            margin-bottom: 10px;
+        }
+
+        .press-releases a {
+            color: #ad0900;
+            text-decoration: none;
+        }
+
+        .press-releases a:hover {
+            text-decoration: underline;
+        }
+
+        /* Contact Form */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input, textarea {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        button {
+            padding: 12px 20px;
+            background-color: #ad2800;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #e20b03f6;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #ad2300;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer-container a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer-container a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header, main, footer {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Investor Relations</h1>
+            <p>Keep track of our financial performance, strategy, and corporate governance updates.</p>
+        </div>
+    </header>
+
+    <main>
+        <!-- Company Overview Section -->
+        <section class="company-overview content-block">
+            <h2>Company Overview</h2>
+            <p>Our company is dedicated to delivering sustainable growth and value for our shareholders. We focus on innovation, expansion, and responsible management to ensure long-term success. Learn more about our leadership, strategy, and vision for the future.</p>
+        </section>
+
+        <!-- Financial Reports Section -->
+        <section class="financial-reports content-block">
+            <h2>Financial Reports</h2>
+            <div class="report-links">
+                <a href="annual-report-2024.pdf" target="_blank">Annual Report 2024</a>
+                <a href="quarterly-report-Q1-2024.pdf" target="_blank">Quarterly Report Q1 2024</a>
+                <a href="quarterly-report-Q2-2024.pdf" target="_blank">Quarterly Report Q2 2024</a>
+            </div>
+        </section>
+
+        <!-- Stock Information Section -->
+        <section class="stock-info content-block">
+            <h2>Stock Information</h2>
+            <p>Our stock is traded under the ticker symbol <strong>[TICKER]</strong>. Below you can find the latest stock prices and market updates.</p>
+            <div class="stock-widget">
+                <iframe src="https://widget.finance.com/stock-widget.html?ticker=[TICKER]" width="100%" height="300"></iframe>
+            </div>
+        </section>
+
+        <!-- Press Releases Section -->
+        <section class="press-releases content-block">
+            <h2>Press Releases</h2>
+            <ul>
+                <li><a href="press-release-1.html">Strategic Partnership Announced - September 2024</a></li>
+                <li><a href="press-release-2.html">Q2 Financial Results - August 2024</a></li>
+                <li><a href="press-release-3.html">Expansion into New Markets - June 2024</a></li>
+            </ul>
+        </section>
+
+        <!-- Investor Contact Section -->
+        <section class="investor-contact content-block">
+            <h2>Contact Investor Relations</h2>
+            <form action="/submit-investor-query" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2024 Company Name. All Rights Reserved.</p>
+            <p><a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-use.html">Terms of Use</a></p>
+        </div>
+    </footer>
+</body>
+</html>
